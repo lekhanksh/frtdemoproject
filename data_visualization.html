@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Data-Visualization</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="data_visualization/data_visualization.css">
+		<link rel="stylesheet" href="data_visualization/css/style.css">
+       <script src="data_visualization/js/main.js"></script>
+      
+
+
+    <script type="text/javascript">
+        function changeIt(objName)
+        {
+            //The image object accessed through its id we mentioned in the DIV block which is going to be visible currently
+            var obj = document.getElementById(objName);
+
+            //An array that hold the IDs of images that we mentioned in their DIV blocks
+            var objId = new Array();
+
+            //Storing the image IDs into the array starts here
+            objId[0] = "image1";
+            objId[1] = "image2";
+            objId[2] = "image3";
+            objId[3] = "image4";
+            objId[4] = "image5";
+            objId[5] = "image6";
+            objId[6] = "image7";
+            objId[7] = "image8";
+            objId[8] = "image9";
+            //Storing the image IDs into the array ends here
+
+            //A counter variable going to use for iteration
+            var i;
+
+            //A variable that can hold all the other object references other than the object which is going to be visible
+            var tempObj;
+
+            //The following loop does the display of a single image based on its ID. The image whose ID we passed into this function will be the
+            //only image that is displayed rest of the images will be hidden based on their IDs and that part has been handled by the else part
+            //of the if statement within this loop.
+            for(i=0;i<objId.length;i++)
+            {
+                if(objName == objId[i])
+                {
+                    obj.style.display = "block";
+                }
+                else
+                {
+                    tempObj = document.getElementById(objId[i]);
+                    tempObj.style.display = "none";	
+                }
+            }
+            return;	
+        }
+    </script>
+  </head>
+<!--  main  body -->
+  <body data-new-gr-c-s-check-loaded="14.1007.0" data-gr-ext-installed="">
+		
+		<div class="wrapper d-flex align-items-stretch">
+            
+         <nav id="sidebar" class="">
+          <div class="custom-menu">
+             
+<!--
+             <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                        
+	          <i class="fa fa-bars"></i>
+	          <span class="sr-only">Toggle Menu</span>
+	        </button>
+-->
+         </div>     
+	  	 <h1><a class="logo" href="index.html">Technosal</a></h1>
+         <ul class="list-unstyled components mb-5">
+       
+          <li class="active">
+            <a href="#" onclick = "changeIt('image1');"  id="img1"><span > Age vs saline Bottles</span> </a>
+          </li>
+          <li>
+              <a href="#" onclick = "changeIt('image2');" id="img2"><span >BMI vs saline bottle count</span>  </a>
+          </li>
+          <li>
+            <a href="#" onclick = "changeIt('image3');" id="img3"><span >Number of Salines used</span>  </a>
+          </li>
+          <li>
+            <a href="#" onclick = "changeIt('image4');" id="img4"><span >Salines used vs Diseases</span>  </a>
+          </li>
+         <li>
+            <a href="#" onclick = "changeIt('image5');" id="img5"><span >Counts Based on Region</span>  </a>
+          </li>
+         <li>
+            <a href="#" onclick = "changeIt('image6');" id="img6"><span >Overweight Males and Females</span>  </a>
+          </li>
+         <li>
+            <a href="#" onclick = "changeIt('image7');" id="img7"><span >Overweight Patients vs Age</span>  </a>
+          </li>
+           <li>
+            <a href="#" onclick = "changeIt('image8');" id="img7"><span >Patients with Mental Depression</span>  </a>
+          </li>
+            <li>
+            <a href="#" onclick = "changeIt('image9');" id="img7"><span >Young Patients vs Depression</span>  </a>
+          </li>
+         
+        </ul>
+
+    	</nav>
+         
+        <!-- Page Content  -->
+      <div id="content" class="p-4 p-md-5 pt-5" >
+        <h2 class="mb-4"> DATA VISUALIZATION</h2>
+        <div id="image1"> <img src="data_visualization/images/Age%20vs%20saline%20bottles.jpeg"  height="500px;" width="900px;" ></div>
+        <div id="image2"> <img src="data_visualization/images/BMI%20vs%20saline%20bottle%20count.jpeg"  height="500px;" ></div>
+        <div id="image3"> <img src="data_visualization/images/Number%20of%20Salines%20used%20male%20or%20female.jpeg"  height="500px;"></div>
+        <div id="image4"> <img src="data_visualization/images/Salines%20used%20vs%20Diseases.jpeg"   height="500px;" ></div>
+        <div id="image5"> <img src="data_visualization/images/Counts%20Based%20On%20Region%20.jpeg"   height="500px;" ></div>
+        <div id="image6"> <img src="data_visualization/images/Overweight_males_feamales.jpeg"   height="500px;" ></div>
+        <div id="image7"> <img src="data_visualization/images/Overweight%20Patients%20vs%20Age.jpeg"   height="500px;" ></div>
+        <div id="image8"> <img src="data_visualization/images/Patient%20Mental%20Depression.jpeg"   height="500px;" ></div>
+        <div id="image9"> <img src="data_visualization/images/Young%20Patients%20vs%20Depression.jpeg"   height="500px;" ></div>
+      </div>
+      </div>
+
+    <script src="data_visualization/js/jquery.min.js"></script>
+    <script src="data_visualization/js/popper.js"></script>
+    <script src="data_visualization/js/bootstrap.min.js"></script>
+    
+  </body>
+</html>
